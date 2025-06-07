@@ -15,7 +15,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   void showToast() {
     Fluttertoast.showToast(
-      msg: "show toast",
+      msg: "Hello, Flutter!",
       gravity: ToastGravity.BOTTOM,
       toastLength: Toast.LENGTH_SHORT,
       backgroundColor: Colors.red,
@@ -91,48 +91,148 @@ class _MyAppState extends State<MyApp> {
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
                 maxCrossAxisExtent: 100,
-                children: [Image.asset("assets/images/Cat03.jpg")],
+                children: [Image.asset("assets/images/Cat03.jpg"),
+                  Image.asset("assets/images/1.jpg"),
+                  Image.asset("assets/images/2.jpg"),
+                  Image.asset("assets/images/3.jpg"),
+                  Image.asset("assets/images/4.jpg"),
+                  Image.asset("assets/images/5.jpg"),
+                Container(color: Colors.red, child: Center(child: Text("1", style: TextStyle(fontSize: 20)))),
+                  Container(color: Colors.teal, child: Center(child: Text("2", style: TextStyle(fontSize: 20)))),
+                  Container(color: Colors.amber, child: Center(child: Text("3", style: TextStyle(fontSize: 20)))),
+                  Container(color: Colors.redAccent, child: Center(child: Text("4", style: TextStyle(fontSize: 20)))),
+                  Container(color: Colors.deepOrange, child: Center(child: Text("5", style: TextStyle(fontSize: 20)))),
+                  Container(color: Colors.purple, child: Center(child: Text("6", style: TextStyle(fontSize: 20)))),
+                ],
               ),
-              Center(
-                child: Container(
-                  color: Colors.yellow,
-                  width: 300,
-                  height: 300,
-                  child: Card(
-                    color: Colors.orange,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    elevation: 10,
-                    child: Column(
-                      // mainAxisAlignment: MainAxisAlignment.center,
-                      // crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        ListTile(
-                          leading: Icon(Icons.album, size: 50),
-                          title: Text("Pink Floyd"),
-                          subtitle: Text("Best Band"),
+              Row(
+                children: [
+                  Center(
+                    child: Container(
+                      color: Colors.yellow,
+                      width: 300,
+                      height: 300,
+                      child: Card(
+                        color: Colors.orange,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                        elevation: 10,
+                        child: Column(
+                          // mainAxisAlignment: MainAxisAlignment.center,
                           // crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            ElevatedButton(
-                              onPressed: () {},
-                              child: Text("Button 1"),
+                            ListTile(
+                              leading: Icon(Icons.album, size: 50),
+                              title: Text("Pink Floyd"),
+                              subtitle: Text("Best Band"),
                             ),
-                            SizedBox(width: 5),
-                            ElevatedButton(
-                              onPressed: () {},
-                              child: Text("Button 2"),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              // crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                ElevatedButton(
+                                  onPressed: () {},
+                                  child: Text("Button 1"),
+                                ),
+                                SizedBox(width: 5),
+                                ElevatedButton(
+                                  onPressed: () {},
+                                  child: Text("Button 2"),
+                                ),
+                              ],
                             ),
                           ],
                         ),
-                      ],
+                      ),
                     ),
                   ),
-                ),
+                  Center(
+                    child: Container(
+                      color: Colors.red,
+                      width: 300,
+                      height: 300,
+                      child: Card(
+                        color: Colors.green,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        elevation: 10,
+                        child: Column(
+                          // mainAxisAlignment: MainAxisAlignment.center,
+                          // crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            ListTile(
+                              leading: Icon(Icons.safety_check, size: 50),
+                              title: Text("Download an antivirus"),
+                              subtitle: Text("Free of Charge"),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              // crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                ElevatedButton(
+                                  onPressed: () {},
+                                  child: Text("Button 1"),
+                                ),
+                                SizedBox(width: 5),
+                                ElevatedButton(
+                                  onPressed: () {},
+                                  child: Text("Button 2"),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Center(
+                    child: Container(
+                      color: Colors.deepOrange,
+                      width: 300,
+                      height: 300,
+                      child: Card(
+                        color: Colors.purple,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        elevation: 10,
+                        child: Column(
+                          // mainAxisAlignment: MainAxisAlignment.center,
+                          // crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            ListTile(
+                              leading: Icon(Icons.dangerous, size: 50),
+                              title: Text("Danger"),
+                              subtitle: Text("Do not click"),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              // crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                ElevatedButton(
+                                  onPressed: () {},
+                                  child: Text("Button 1"),
+                                ),
+                                SizedBox(width: 5),
+                                ElevatedButton(
+                                  onPressed: () {},
+                                  child: Text("Button 2"),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+
+
+                ],
               ),
+
+
               Scaffold(
                 appBar: AppBar(title: Text("AppBar")),
                 drawer: Drawer(
